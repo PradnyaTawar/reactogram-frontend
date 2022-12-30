@@ -1,0 +1,16 @@
+.navbar{
+    height: 70px !important;
+}
+.searchbox{
+    width: 30vw;
+    padding: 10px;
+}
+
+@media only screen and (max-width:450px){
+    .searchbox{
+       display: none;
+    }
+    .navbar-brand{
+        margin-left: 5px !important;
+    }
+}

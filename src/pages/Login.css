@@ -1,0 +1,54 @@
+.login-container {
+    margin-top: 3rem;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-bg {
+    background-color: #f3f3f3;
+    color: #dbd5d5;
+    height: 2.9rem;
+    font-size: 0.9rem;
+}
+
+.custom-btn {
+    padding: 0.6rem;
+    border-radius: 4px;
+}
+
+.custom-btn-blue {
+    border: 1px solid #b3e0ff;
+    background-color: #429dda;
+    color: rgb(253, 249, 249);
+}
+
+.custom-btn-white {
+    border: 1px solid #d3d6d8;
+    background-color: #ffffff;
+    color: rgb(10, 10, 10);
+    padding: 14px;
+}
+
+.socialdesktop-img {
+    display: block;
+}
+
+.socialmobile-img {
+    display: none;
+}
+
+@media only screen and (max-width:650px) {
+    .socialdesktop-img {
+        display: none;
+    }
+
+    .socialmobile-img {
+        display: block;
+    }
+    .card{
+        border: none !important;
+    }
+    .shadow{
+        box-shadow: none !important;
+    }
+}
