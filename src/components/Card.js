@@ -15,7 +15,7 @@ const Card = () => {
                             </div>
                         </div>
                         <div className="col-6">
-                            <i class="float-end fs-4 p-3 mt-3 fa-solid fa-ellipsis-vertical"></i>
+                            <i class="float-end fs-3 p-2 mt-2 fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
                     <div className="row">
