@@ -1,9 +1,14 @@
 .login-container {
-    margin-top: 3rem;
+    margin-top: 1rem;
     font-family: 'Inter', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
-
+.signup-container{
+    width: 100vw;
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
 .input-bg {
     background-color: #f3f3f3;
     color: #dbd5d5;
@@ -17,7 +22,7 @@
 }
 
 .custom-btn-blue {
-    border: 1px solid #b3e0ff;
+    border: 2px solid #b3e0ff;
     background-color: #429dda;
     color: rgb(253, 249, 249);
 }

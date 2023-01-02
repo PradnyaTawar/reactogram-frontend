@@ -1,6 +1,6 @@
 .profile-pic{
-    height: 70px;
-    width:70px;
+    height: 60px;
+    width:60px;
     border-radius: 50%;
 }
 
@@ -8,10 +8,3 @@
     margin-top: -14px;
 }
 
-.cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding:15px;
-    margin:25px;
-
-}

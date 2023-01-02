@@ -2,6 +2,7 @@ import './Login.css'
 import socialdesktop from '../images/social.png'
 import scoialmobile from '../images/social-mob.png'
 import {Link} from 'react-router-dom'
+
 function Login() {
     return (
         <div className="container login-container">

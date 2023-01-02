@@ -10,8 +10,8 @@ const Card = () => {
                         <div className="col-6 d-flex">
                             <img className="p-2 profile-pic" alt="profile pic" src="https://images.unsplash.com/photo-1671877308526-ac799c88db13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
                             <div className="mt-2">
-                                <p className="fs-6 fw-bold">Title</p>
-                                <p className="location">name</p>
+                                <p className="fs-6 fw-bold">Pradnya_T</p>
+                                <p className="location">Nagpur</p>
                             </div>
                         </div>
                         <div className="col-6">

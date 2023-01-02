@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 function Signup() {
     return (
-        <div className="container login-container">
+        <div className="container signup-container">
             <div className="row">
             <div className="col-md-7 col-sm-12 d-flex justify-content-center align-items-center ">
                     <img className="socialdesktop-img" src={socialdesktop}  alt="desktop-img" height="450px" width="400px" />
