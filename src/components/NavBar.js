@@ -27,7 +27,7 @@ const NavBar = () => {
                                     <NavLink to="myProfile" className="nav-link mt-0" href="#">
                                         <p>My Profile</p>
                                     </NavLink></li>
-                                <li><a className="dropdown-item" href="#">Logout</a></li>
+                                <li><NavLink to="/"  className="dropdown-item" href="#">Logout</NavLink></li>
                             </ul>
                         </div>
                     </form>
