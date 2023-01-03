@@ -28,9 +28,9 @@ const Card = () => {
                     </div>
                     <div className="row my-2">
                         <div className="col-6 d-flex ps-2">
-                        <i class="ps-2 fs-4 fa-regular fa-heart"></i>
-                        <i class="ps-3 fs-4 fa-regular fa-comment"></i>
-                        <i class="ps-2 fs-4 fa-solid fa-location-arrow"></i>
+                        <i className="ps-2 fs-4 fa-regular fa-heart"></i>
+                        <i className="ps-3 fs-4 fa-regular fa-comment"></i>
+                        <i className="ps-2 fs-4 fa-solid fa-location-arrow"></i>
                         </div>
                         <div className="col-6">
                             <span className="pe-2 fs-6 fw-bold float-end">200likes</span>

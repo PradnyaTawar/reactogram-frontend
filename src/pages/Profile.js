@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 import './Profile.css'
@@ -59,21 +59,21 @@ const Profile = () => {
             <div className="row mb-4">
                 <div className="col-md-4 col-sm-12">
                     <div className="card " onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img1" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <div className="card" onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img2" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <div className="card" onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img3" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
@@ -82,21 +82,21 @@ const Profile = () => {
             <div className="row mb-4">
                 <div className="col-md-4 col-sm-12">
                     <div className="card">
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img4" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <div className="card" onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img5" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <div className="card" onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img6" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
@@ -105,21 +105,21 @@ const Profile = () => {
             <div className="row mb-4">
                 <div className="col-md-4 col-sm-12">
                     <div className="card" onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img7" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <div className="card" onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img8" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <div className="card" onClick={handleShow}>
-                        <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
+                        <img alt="img9" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="card-img-top" alt='...'>
 
                         </img>
                     </div>
@@ -135,30 +135,30 @@ const Profile = () => {
                     <Modal.Body>
                         <div className="row">
                             <div className="col-md-6">
-                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                                    <div class="carousel-indicators">
+                                <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
+                                    <div className="carousel-indicators">
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                     </div>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDY3fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="..." />
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                            <img alt="img10" src="https://images.unsplash.com/photo-1542189736-67ca49d5342b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDY3fDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="..." />
                                         </div>
-                                        <div class="carousel-item">
-                                            <img src="https://images.unsplash.com/photo-1670271080081-bd6e50d8c195?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDkxfDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="..." />
+                                        <div className="carousel-item">
+                                            <img alt="img11" src="https://images.unsplash.com/photo-1670271080081-bd6e50d8c195?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDkxfDZzTVZqVExTa2VRfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="..." />
                                         </div>
-                                        <div class="carousel-item">
-                                            <img src="https://images.unsplash.com/photo-1669915746165-232236839501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEzOHw2c01WalRMU2tlUXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="..." />
+                                        <div className="carousel-item">
+                                            <img alt="img12" src="https://images.unsplash.com/photo-1669915746165-232236839501?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDEzOHw2c01WalRMU2tlUXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="..." />
                                         </div>
                                     </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
                                     </button>
                                 </div>
                             </div>
@@ -177,12 +177,12 @@ const Profile = () => {
                                             <div className="col-6">
                                                 <div class="dropdown float-end">
                                                     <a className="btn " href="#" role="button" data-bs-toggle="dropdown" >
-                                                        <i class="float-end fs-3 p-2 mt-2  fa-solid fa-ellipsis"></i>
+                                                        <i className="float-end fs-3 p-2 mt-2  fa-solid fa-ellipsis"></i>
                                                     </a>
 
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square px-2"></i>Edit Post</a></li>
-                                                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can px-2"></i>Delete Post</a></li>
+                                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <li><a className="dropdown-item" href="#"><i className="fa-solid fa-pen-to-square px-2"></i>Edit Post</a></li>
+                                                        <li><a className="dropdown-item" href="#"><i className="fa-solid fa-trash-can px-2"></i>Delete Post</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -202,9 +202,9 @@ const Profile = () => {
                                         </div>
                                         <div className="row my-2">
                                             <div className="col-6 d-flex ps-2">
-                                                <i class="ps-2 fs-4 fa-regular fa-heart"></i>
-                                                <i class="ps-3 fs-4 fa-regular fa-comment"></i>
-                                                <i class="ps-2 fs-4 fa-solid fa-location-arrow"></i>
+                                                <i className="ps-2 fs-4 fa-regular fa-heart"></i>
+                                                <i className="ps-3 fs-4 fa-regular fa-comment"></i>
+                                                <i className="ps-2 fs-4 fa-solid fa-location-arrow"></i>
                                             </div>
                                             <div className="col-12 mt-2">
                                                 <span className="  fs-6 fw-bold ">200likes</span>
@@ -235,7 +235,7 @@ const Profile = () => {
                                          placeholder="Upload post"
                                        onChange="handleFileSelect(this)" 
                                         />
-                        <div className="dropZoneOverlay"><i class="fa-solid fa-cloud-arrow-up fs-3"></i><br></br>Upload from your computer</div>
+                        <div className="dropZoneOverlay"><i className="fa-solid fa-cloud-arrow-up fs-3"></i><br></br>Upload from your computer</div>
                                     </div>
                                 </div>
                             </div>
