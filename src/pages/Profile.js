@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 // import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
+import { API_BASE_URL } from '../../src/config'
+import axios from 'axios';
+import Swal from 'sweetalert2'
 import './Profile.css'
+import {useNavigate} from 'react-router-dom'
 
 const Profile = () => {
+    const [image, setImage] = useState({ preview: '', data: '' })
+    const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+
     const [show, setShow] = useState(false);
+    const [caption, setCaption] = useState("");
+    const [location, setLocation] = useState("");
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -14,6 +23,60 @@ const Profile = () => {
 
     const handlePostClose = () => setShowPost(false);
     const handlePostShow = () => setShowPost(true);
+
+    const CONFIG_OBJ = {
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + localStorage.getItem("token")
+        }
+    }
+    const handleFileSelect = (event) => {
+        const img = {
+            preview: URL.createObjectURL(event.target.files[0]),
+            data: event.target.files[0]
+        }
+        setImage(img);
+    }
+    const handleImgUpload = async () => {
+        let formData = new FormData();
+        formData.append('file', image.data);
+        const response = axios.post(`${API_BASE_URL}/uploadFile`, formData);
+        return response;
+    }
+    const addPost = async () => {
+        if (image.preview === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Post Image is mandatory!'
+            })
+        } else if (caption === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Caption is mandatory!'
+            })
+        } else if (location === '') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Location is mandatory!'
+            })
+        } else {
+            setLoading(true);
+            const imgRes = await handleImgUpload();
+            const request = { description: caption, location: location, image: `${API_BASE_URL}/${imgRes.data.fileName}` }
+            const postResponse = await axios.post(`${API_BASE_URL}/crestepost`, request , CONFIG_OBJ);
+            setLoading(false);
+            
+            if(postResponse.status == 201){
+                navigate("/posts")
+            }else{
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Some error occured while creating post!'
+                })
+            }
+        }
+
+    }
     return (
         <div className="container container-profile bg-light shadow mt-3 p-4">
             <div className="row">
@@ -22,7 +85,7 @@ const Profile = () => {
                     <p className="ms-1 fs-5 fw-bold" >Pradnya Tawar</p>
                     <p className="ms-1 " >Pradnya Tawar</p>
                     <p className="ms-1  " >UI/UX Designer @pradnya | Follow @pradnya</p>
-                    <p className="ms-1  " >My Portfolio on <a href="#">https://pradnyatawar.github.io/Portfolio/</a></p>
+                    <p className="ms-1  " >My Portfolio on <a >https://pradnyatawar.github.io/Portfolio/</a></p>
 
                 </div>
                 <div className="col-md-6 d-flex flex-column justify-content-between mt-3">
@@ -176,13 +239,13 @@ const Profile = () => {
 
                                             <div className="col-6">
                                                 <div class="dropdown float-end">
-                                                    <a className="btn " href="#" role="button" data-bs-toggle="dropdown" >
+                                                    <a className="btn " role="button" data-bs-toggle="dropdown" >
                                                         <i className="float-end fs-3 p-2 mt-2  fa-solid fa-ellipsis"></i>
                                                     </a>
 
                                                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <li><a className="dropdown-item" href="#"><i className="fa-solid fa-pen-to-square px-2"></i>Edit Post</a></li>
-                                                        <li><a className="dropdown-item" href="#"><i className="fa-solid fa-trash-can px-2"></i>Delete Post</a></li>
+                                                        <li><a className="dropdown-item" ><i className="fa-solid fa-pen-to-square px-2"></i>Edit Post</a></li>
+                                                        <li><a className="dropdown-item" ><i className="fa-solid fa-trash-can px-2"></i>Delete Post</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -228,14 +291,16 @@ const Profile = () => {
                         <div className="row">
                             <div className="col-md-6 col-sm-12">
                                 <div className="Upload-box">
-                                <div className="dropZoneContainer">
-                                        <input type="file" id="drop_zone" 
-                                        className="FileUpload" 
-                                        accept='.jpg, .png, .gif'
-                                         placeholder="Upload post"
-                                       onChange="handleFileSelect(this)" 
+                                    <div className="dropZoneContainer">
+                                        <input name="file" type="file" id="drop_zone"
+                                            className="FileUpload"
+                                            accept='.jpg, .png, .gif'
+                                            placeholder="Upload post"
+                                            onChange={handleFileSelect}
                                         />
-                        <div className="dropZoneOverlay"><i className="fa-solid fa-cloud-arrow-up fs-3"></i><br></br>Upload from your computer</div>
+                                        <div className="dropZoneOverlay">
+                                            {image.preview && <img src={image.preview} width="200" height="200" />}
+                                            <i className="fa-solid fa-cloud-arrow-up fs-3"></i><br></br>Upload from your computer</div>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +309,7 @@ const Profile = () => {
                                     <div className="row mt-5">
                                         <div className="col-md-6 col-md-12 mb-3">
                                             <div className="form-floating ">
-                                                <textarea type="text" className="form-control"
+                                                <textarea onChange={(ev) => setCaption(ev.target.value)} type="text" className="form-control"
                                                     id="floatingInput" placeholder="Add location" />
                                                 <label for="floatingInput">Add Captions</label>
                                             </div>
@@ -253,7 +318,7 @@ const Profile = () => {
                                     <div className="row ">
                                         <div className="col-md-6 col-md-12">
                                             <div className="form-floating mb-3">
-                                                <input type="text" className="form-control"
+                                                <input onChange={(ev) => setLocation(ev.target.value)} type="text" className="form-control"
                                                     id="floatingInput" placeholder="Add location" />
                                                 <label for="floatingInput"><i className="p-2 fa-solid fa-location-pin"></i>Add Locations</label>
                                             </div>
@@ -261,7 +326,7 @@ const Profile = () => {
                                     </div>
                                     <div className="row  mt-5">
                                         <div className="col-md-6 col-md-12">
-                                            <button type="submit" className="custom-btn custom-btn-post float-end">
+                                            <button onClick={() => addPost()} type="submit" className="custom-btn custom-btn-post float-end">
                                                 <span className="fs-6 fw-bold" >Post</span>
                                             </button>
                                         </div>
