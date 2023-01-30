@@ -10,6 +10,7 @@ import { API_BASE_URL } from '../../src/config'
 import Swal from 'sweetalert2'
 
 function Login() {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -20,17 +21,18 @@ function Login() {
 
     const login = (event) => {
         event.preventDefault();
+        
         setLoading(true);
 
-        const requestData = {  email, password }
+        const requestData = { email, password }
         axios.post(`${API_BASE_URL}/login`, requestData)
             .then((result) => {
-                debugger;
-                if (result.status === 200) {
+                
+                if (result.status == 200) {
                     setLoading(false);
                     localStorage.setItem("token", result.data.result.token);
                     localStorage.setItem('user', JSON.stringify(result.data.result.user));
-                    dispatch({ type: 'LOGIN_SUCCESS', PAYLOAD: result.data.result.user});
+                    dispatch({ type: 'LOGIN_SUCCESS', payload: result.data.result.user});
                     setLoading(false);
                     navigate('/myprofile')
                    
